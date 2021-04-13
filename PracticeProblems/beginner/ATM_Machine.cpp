@@ -10,7 +10,7 @@ void solve(int NO_OF_PEOPLES,int ATM_AMOUNT,int PEOPLES_MONEY[])
 	{
 		if(ATM_AMOUNT>=PEOPLES_MONEY[i])
 		{
-			ATM_AMOUNT-=PEOPLES_MONEY[i];
+			ATM_AMOUNT-=PEOPLES_MONEY[i]; // withdraw money from ATM
 			cout<<1;
 		}
 		else
