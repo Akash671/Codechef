@@ -23,5 +23,5 @@ int main()
 			cin>>d>>n;
 			cout<<solve(d,n)<<endl;
 		}
-	return 0;
+	//return 0;
 }
