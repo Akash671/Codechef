@@ -7,54 +7,32 @@ using namespace std;
 
 string solve(ll n,ll x,ll k)
 {
-    int c=0;
-    ll d;
-    vector<int>v1;
-    vector<int>v2;
-		    for(int i=0;i<n+2;++i)   
-		    {
-		    	d=i*k;
-		    	if(d<=n+1)
-		    	{
-		    	   v1.push_back(d);
-		    	}
-		    	else
-		    	{
-		    		break;
-		    	}
-		    	
-		    }
-		for(int i=0;i<n+2;i++)
-		    {
-		    	d=n+1-i*k;
-		    	if(d<=n+1)
-		    	{
-		    		v2.push_back(d);
-		    	}
-		    	else
-		    	{
-		    		break;
-		    	}
-		    }
-	for(int i=0;i<v1.size();++i)
+	if(x%k==0)
 	{
-		if(v1[i]==x | v2[i]==x)
+		return "YES";
+	}
+	else
+	{
+		if(((n+1)-x)%k==0)
 		{
 			return "YES";
 		}
+		else
+		{
+			return "NO";
+		}
 	}
-	return "NO";
 }
 
 int main()
 {
-	int t;
+	long int t;
 	cin>>t;
 	while(t--)
 	{
-		ll n,x,k;
-		cin>>n>>x>>k;
-		cout<<solve(n,x,k)<<"\n";
+	    ll n,x,k;
+	    cin>>n>>x>>k;
+	    cout<<solve(n,x,k)<<"\n";
 	}
 	return 0;
 }
