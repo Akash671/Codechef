@@ -3,25 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int solve(int n,int m)
-{
-	int ans=0;
-	for(int i=1;i<=n;++i)
-	{
-		//int c=0;
-		for(int j=i+1;j<=n;++j)
-		{
-			if(((m%i)%j)==((m%j)%i) && i<j)
-			{
-				ans++;
-				//c++;
-			}
-		}
-		//cout<<c<<" ";
-	}
-	return ans;
-}
-
+#define ll long long int
 
 int main()
 {
@@ -29,9 +11,21 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		int n,m;
+		ll n,m;
+		ll ans=0;
 		cin>>n>>m;
-		cout<<solve(n,m)<<"\n";
+		//cout<<solve(n,m)<<"\n";
+		vector<long long>mod(n+1,1);
+		for(ll i=2;i<=n;++i)
+		{
+		    ll x=m%i;
+		    ans+=mod[x];
+			for(ll j=x;j<=n;j+=i)
+			{
+				mod[j]++;
+			}
+		}
+		cout<<ans<<"\n";
 	}
 	return 0;
 }
