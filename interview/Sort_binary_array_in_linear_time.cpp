@@ -10,45 +10,41 @@ using namespace std;
 
 void solve(int n,int a[])
 {
-	vector<int>ze,one;
-	for(int i=0;i<n;++i)// T(n) && s(n*n)
+	vector<int>v;
+	for(int i=0;i<n;++i)
 	{
 		if(a[i]==0)
 		{
-			ze.pb(a[i]);
+			cout<<a[i]<<" ";
 		}
 		else
 		{
-			one.pb(a[i]);
+		   v.pb(a[i]);
 		}
 	}
-	for(auto i:ze)
-	{
-		cout<<i<<" " ;
-	}
-	for(auto i:one)
+	for(auto i:v)
 	{
 		cout<<i<<" ";
 	}
 }
-
+// time complexity is T(n)=O(n)
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	int t;
-	cin>>t;
-	while(t--)
-	{
-		int n;
-		cin>>n;
-		int a[n];
-		for(int i=0;i<n;++i)
-		{
-			cin>>a[i];
-		}
-		solve(n,a);
-		cout<<"\n";
-	}
+    int t;
+    cin>>t;
+    while(t--)		
+    {
+    	int n;
+    	cin>>n;
+    	int a[n];
+    	for(int i=0;i<n;++i)
+    	{
+    		cin>>a[i];
+    	}
+    	solve(n,a);
+    	cout<<"\n";
+    }
 	return 0;
 }
