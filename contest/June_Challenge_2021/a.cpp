@@ -2,12 +2,16 @@
    github : https://www.github.com/Akash671
 */
 
+/* 
+problem is:-
+
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
 
 #define ll long long int
-#define MOD 1000000007
+#define mod 1000000007
 #define pb push_back
 #define ld long double
 typedef pair<int, int> PII;
@@ -36,39 +40,11 @@ void swp(T &n1, T &n2)
 //myMax<int>(x,y)
 //myMax<char>('g','e')
 
-
-ll power(ll base , ll n)
-{
-	// initialize ans = 1;
-	ll ans = 1;
-	while(n>0)
-	{
-		// whenever power is odd , club it with the ans
-		if(n%2)ans = (ans*base)%MOD;
- 
-		base = (base * base)%MOD; // make base square each time
- 
-		n>>=1;  // each time divide the power by 2
-	}
-	return ans;
-}
-
 void solve()
 {
-   	ll N,M;
-   	cin>>N>>M;
-   	if(N==1)
-   	{
-   		cout<<1;
-   	}
-   	else
-   	{
-   		ll x=(power(2,N)-1);
-   		//x=x;
-   		ll ans=power(x,M);
-   	//	ans=ans;
-   		cout<<ans;
-   	}
+   	int xa,xb,Xa,Xb;
+   	cin>>xa>>xb>>Xa>>Xb;
+   	cout<<Xa/xa+Xb/xb;
 }
 
 int main()
