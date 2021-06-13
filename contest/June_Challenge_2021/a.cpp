@@ -2,11 +2,6 @@
    github : https://www.github.com/Akash671
 */
 
-/* 
-problem is:-
-
-*/
-
 #include<bits/stdc++.h>
 using namespace std;
 
