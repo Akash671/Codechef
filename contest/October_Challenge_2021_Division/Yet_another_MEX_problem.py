@@ -29,5 +29,5 @@ for _ in range(int(input())):
  else:
   print(0)
 
-
-# T(n)=O(N^2)
+#time complexity
+# T(n)=O(n^2)
